@@ -20,7 +20,8 @@
 
         .header {
             background: linear-gradient(rgba(42,92,130,0.9), rgba(42,92,130,0.9)),
-                        url('therapy-bg.jpg') center/cover;
+                        url('images/therapy-bg.jpg') center/cover;
+            background-color: var(--primary-blue);
             color: white;
             padding: 2rem 1rem;
             text-align: center;
@@ -89,7 +90,100 @@
             gap: 2rem;
         }
 
-        /* Add more styles for other sections */
+        .profile-photo {
+            border-radius: 10px;
+            max-width: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.02);
+        }
+
+        .figure-caption {
+            text-align: center;
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--primary-blue);
+        }
+
+        .bio-intro {
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .bio-content {
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .bio-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-quote {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-left: 4px solid var(--primary-green);
+            font-style: italic;
+            color: var(--primary-blue);
+        }
+
+        .bio-quote::before {
+            content: "“";
+            font-size: 3rem;
+            color: var(--primary-green);
+            line-height: 0;
+            margin-right: 0.5rem;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .certification-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-icon {
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-gray);
+            border-radius: 50%;
+        }
+
+        .certification-card h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--primary-blue);
+        }
+
+        .certification-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
     </style>
 </head>
 <body>
@@ -120,13 +214,12 @@
     <section class="section">
         <h2>Conditions We Treat</h2>
         <ul class="conditions-grid">
-            <!-- List all conditions here -->
             <li>Neck & Back Pain</li>
             <li>Arthritis</li>
-	    <li>Chronic Pain</li>
-	    <li>Hip, Knee, Ankle, Foot Pain</li>
-	    <li>Shoulder, Elbow, Hand Pain</li>
-	    <li>General Weakness and Balance Issues</li>
+            <li>Chronic Pain</li>
+            <li>Hip, Knee, Ankle, Foot Pain</li>
+            <li>Shoulder, Elbow, Hand Pain</li>
+            <li>General Weakness and Balance Issues</li>
             <li>Post-Surgical Rehab</li>
             <li>Sciatica</li>
             <li>Carpal Tunnel</li>
@@ -134,161 +227,81 @@
             <li>Vertigo</li>
             <li>TMJ Dysfunction</li>
             <li>Parkinson's</li>
-            <!-- Add all other conditions -->
         </ul>
     </section>
 
-<section class="section about-section">
-    <div>
-        <h2>Meet Paul</h2>
-        <p class="bio-intro">An Arkansas native with a passion for helping people move better and live better.</p>
-        
-        <div class="bio-content">
-            <p>Growing up in El Dorado, Arkansas, Paul discovered his love for physical fitness and helping others through sports. After experiencing firsthand the positive impact of physical therapy during his high school years, he knew he'd found his calling.</p>
+    <section class="section about-section">
+        <div>
+            <h2>Meet Paul</h2>
+            <p class="bio-intro">An Arkansas native with a passion for helping people move better and live better.</p>
             
-            <p>Paul pursued his passion at Harding University, where he earned both his Bachelor's degree in Exercise Science (2014) and Doctorate in Physical Therapy (2017). During his time in Searcy, he fell in love with the community and developed his patient-centered approach to care.</p>
+            <div class="bio-content">
+                <p>Growing up in El Dorado, Arkansas, Paul discovered his love for physical fitness and helping others through sports. After experiencing firsthand the positive impact of physical therapy during his high school years, he knew he'd found his calling.</p>
+                
+                <p>Paul pursued his passion at Harding University, where he earned both his Bachelor's degree in Exercise Science (2014) and Doctorate in Physical Therapy (2017). During his time in Searcy, he fell in love with the community and developed his patient-centered approach to care.</p>
+                
+                <p>What sets Paul apart is his commitment to continuous learning and specialized care. He's pursued advanced certifications in dry needling, LSVT-BIG therapy, manual therapy, and orthopedic specialization - all to provide the most effective, evidence-based treatments for his patients.</p>
+                
+                <p>When he's not helping patients regain their mobility, Paul enjoys staying active with his family. He and his wife Kacie (married in 2021) are raising two energetic boys and love exploring Northwest Arkansas. You might spot Paul on the pickleball court, biking trails, or basketball court when he's not in the clinic.</p>
+                
+                <blockquote class="bio-quote">
+                    "My greatest joy is seeing patients regain their independence and return to the activities they love. There's nothing more rewarding than helping someone move without pain."
+                </blockquote>
+            </div>
             
-            <p>What sets Paul apart is his commitment to continuous learning and specialized care. He's pursued advanced certifications in dry needling, LSVT-BIG therapy, manual therapy, and orthopedic specialization - all to provide the most effective, evidence-based treatments for his patients.</p>
-            
-            <p>When he's not helping patients regain their mobility, Paul enjoys staying active with his family. He and his wife Kacie (married in 2021) are raising two energetic boys and love exploring Northwest Arkansas. You might spot Paul on the pickleball court, biking trails, or basketball court when he's not in the clinic.</p>
-            
-            <blockquote class="bio-quote">
-                "My greatest joy is seeing patients regain their independence and return to the activities they love. There's nothing more rewarding than helping someone move without pain."
-            </blockquote>
-        </div>
-    </div>
-    <img src="paul-photo.JPG" alt="Paul Anzalone, DPT" style="border-radius:10px;max-width:100%">
-</section>
-
-<style>
-    .bio-intro {
-        font-size: 1.25rem;
-        color: var(--primary-blue);
-        font-weight: bold;
-        margin-bottom: 2rem;
-    }
-
-    .bio-content {
-        line-height: 1.8;
-        color: #444;
-    }
-
-    .bio-content p {
-        margin-bottom: 1.5rem;
-    }
-
-    .bio-quote {
-        margin: 2rem 0;
-        padding: 1.5rem;
-        background: var(--light-gray);
-        border-left: 4px solid var(--primary-green);
-        font-style: italic;
-        color: var(--primary-blue);
-    }
-
-    .bio-quote::before {
-        content: "“";
-        font-size: 3rem;
-        color: var(--primary-green);
-        line-height: 0;
-        margin-right: 0.5rem;
-    }
-</style>
-        
-        <h3>Certifications & Education</h3>
-        <div class="certifications-grid">
-            <div class="certification-card">
-                <div class="cert-icon">🎓</div>
-                <div>
-                    <h4>Doctor of Physical Therapy</h4>
-                    <p>Harding University, 2017</p>
+            <h3>Certifications & Education</h3>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="cert-icon">🎓</div>
+                    <div>
+                        <h4>Doctor of Physical Therapy</h4>
+                        <p>Harding University, 2017</p>
+                    </div>
                 </div>
-            </div>
-            <div class="certification-card">
-                <div class="cert-icon">📚</div>
-                <div>
-                    <h4>Bachelor's in Exercise Science</h4>
-                    <p>Harding University, 2014</p>
+                <div class="certification-card">
+                    <div class="cert-icon">📚</div>
+                    <div>
+                        <h4>Bachelor's in Exercise Science</h4>
+                        <p>Harding University, 2014</p>
+                    </div>
                 </div>
-            </div>
-            <div class="certification-card">
-                <div class="cert-icon">✋</div>
-                <div>
-                    <h4>Certified Integrated Manual Therapist</h4>
-                    <p>Great Lakes Seminars, 2020</p>
+                <div class="certification-card">
+                    <div class="cert-icon">✋</div>
+                    <div>
+                        <h4>Certified Integrated Manual Therapist</h4>
+                        <p>Great Lakes Seminars, 2020</p>
+                    </div>
                 </div>
-            </div>
-            <div class="certification-card">
-                <div class="cert-icon">🦴</div>
-                <div>
-                    <h4>Orthopedic Clinical Specialist</h4>
-                    <p>Board Certified (OCS), 2023</p>
+                <div class="certification-card">
+                    <div class="cert-icon">🦴</div>
+                    <div>
+                        <h4>Orthopedic Clinical Specialist</h4>
+                        <p>Board Certified (OCS), 2023</p>
+                    </div>
                 </div>
-            </div>
-            <div class="certification-card">
-                <div class="cert-icon">🗣️</div>
-                <div>
-                    <h4>LSVT BIG Certified</h4>
-                    <p>Lee Silverman Voice Treatment, 2017</p>
+                <div class="certification-card">
+                    <div class="cert-icon">🗣️</div>
+                    <div>
+                        <h4>LSVT BIG Certified</h4>
+                        <p>Lee Silverman Voice Treatment, 2017</p>
+                    </div>
                 </div>
-            </div>
-            <div class="certification-card">
-                <div class="cert-icon">💉</div>
-                <div>
-                    <h4>Dry Needling Certified</h4>
-                    <p>Certified 2019</p>
+                <div class="certification-card">
+                    <div class="cert-icon">💉</div>
+                    <div>
+                        <h4>Dry Needling Certified</h4>
+                        <p>Certified 2019</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-</section>
-
-<style>
-    .certifications-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-        margin-top: 2rem;
-    }
-
-    .certification-card {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        background: white;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        transition: transform 0.3s;
-    }
-
-    .certification-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .cert-icon {
-        font-size: 2rem;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--light-gray);
-        border-radius: 50%;
-    }
-
-    .certification-card h4 {
-        margin: 0 0 0.5rem 0;
-        color: var(--primary-blue);
-    }
-
-    .certification-card p {
-        margin: 0;
-        font-size: 0.9rem;
-        color: #666;
-    }
-</style>
+        <figure>
+            <img src="images/paul-photo.jpg" 
+                 alt="Paul Anzalone, DPT providing physical therapy consultation"
+                 class="profile-photo">
+            <figcaption class="figure-caption">Paul Anzalone, DPT - Board Certified Orthopedic Specialist</figcaption>
+        </figure>
+    </section>
 
     <section id="contact" class="section" style="background:var(--primary-blue);color:white">
         <h2>Start Your Recovery Today</h2>
@@ -299,7 +312,5 @@
             <button type="submit" class="cta-button">Get Started</button>
         </form>
     </section>
-
-    <!-- Add footer with contact info -->
 </body>
 </html>
