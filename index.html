@@ -31,6 +31,47 @@
             justify-content: center;
         }
 
+        /* Updated About Section Styles */
+        .about-section {
+            background: var(--light-gray);
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem 1rem;
+        }
+
+        .profile-photo {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .about-section figure {
+            order: -1;
+        }
+
+        @media (min-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr 1fr;
+                padding: 4rem 1rem;
+            }
+            .profile-photo {
+                max-width: 100%;
+                margin: 0;
+            }
+            .about-section figure {
+                order: 0;
+            }
+        }
+
+        /* Rest of existing styles remain unchanged */
         .cta-button {
             background: var(--primary-green);
             color: white;
@@ -80,32 +121,6 @@
             padding: 1rem;
             border-radius: 5px;
             text-align: center;
-        }
-
-        .about-section {
-            background: var(--light-gray);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .profile-photo {
-            border-radius: 10px;
-            max-width: 100%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-photo:hover {
-            transform: scale(1.02);
-        }
-
-        .figure-caption {
-            text-align: center;
-            margin-top: 1rem;
-            font-style: italic;
-            color: var(--primary-blue);
         }
 
         .bio-intro {
@@ -183,6 +198,13 @@
             margin: 0;
             font-size: 0.9rem;
             color: #666;
+        }
+
+        .figure-caption {
+            text-align: center;
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--primary-blue);
         }
     </style>
 </head>
